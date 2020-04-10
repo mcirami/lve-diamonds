@@ -1,0 +1,331 @@
+html {
+	height: 100%;
+	
+	@include media($mobile) {
+		height: auto;
+		body {
+			margin-top: -46px;
+		}
+	}
+	#wpadminbar {
+		@include media($mobile) {
+			margin-top: -46px;
+		}
+	}
+	body {
+		background-color: $white;
+		height: 100%;
+		
+		@include media($mobile) {
+			height: auto;
+		}
+		
+		&.dark_background {
+			background-color: $black;
+		}
+	}
+}
+
+.mm-page {
+	min-height: 100%;
+	margin-bottom: -300px;
+	background-image: url('../images/background.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: $white;
+	
+	&:after {
+		content: "";
+		display: block;
+		height: 300px;
+	}
+}
+
+.dark_background {
+	.mm-page {
+		background-image: url('../images/dark-background.jpg');
+		background-position: center top;
+		background-size: contain;
+		background-color: $black;
+	}
+	
+	&.home {
+		.mm-page {
+			background: $black;
+		}
+	}
+}
+
+// general wrapper class
+section {
+	@include clearfix;
+	clear: both;
+}
+
+.container {
+	@extend %post;
+	// Set max-width here
+	padding: 0 60px 0 40px;
+	
+	@include media($mobile){
+		padding: 0 30px;
+	}
+
+	.content {
+		@include span-columns(12);
+		padding: 2rem 0;
+	}
+	.sidebar {
+		@include span-columns(4);
+		@include omega;
+		padding: 2rem 0;
+	}
+	
+	&.home-hero {
+		max-width: 1280px;
+	}
+}
+
+.container-960 {
+	@extend %post;
+	max-width: 962px;
+}
+
+.content_wrapper {
+	//background-color: $white;
+	padding-top: 15px;
+	
+	@include media($mobile) {
+		margin-top: 46px;
+	}
+}
+
+button {
+	font-size: 14px;
+	border: 0;
+	background: none;
+	display: block;
+	margin: 0 auto;
+	outline: none;
+	
+	&:focus {
+		outline: none;
+	}
+	
+	a {
+		display: block;
+		padding: 10px 30px;
+		background: $black;
+		color: $white;
+		text-transform: uppercase;
+		// @include transition(background .5s ease-in);
+		font-weight: 400;
+		
+		&:hover {
+			background: $hoverBlack;
+			color: $white;
+		}
+		
+		&:active {
+			color: #ccc;
+			background: $black;
+		}
+	}
+}
+
+.black_button {
+	font-size: 14px;
+	border: 0;
+	background: none;
+	display: inline-block;
+	margin: 0 auto;
+	outline: none;
+	
+	&:focus {
+		outline: none;
+	}
+	
+	a {
+		display: block;
+		padding: 10px 30px;
+		background: $black;
+		color: $white;
+		text-transform: uppercase;
+		// @include transition(background .5s ease-in);
+		font-weight: 400;
+		
+		&:hover {
+			background: $hoverBlack;
+			color: $white;
+		}
+		
+		&:active {
+			color: #ccc;
+			background: $black;
+		}
+	}
+}
+
+.blue_button {
+	font-size: 14px;
+	border: 0;
+	background: none;
+	display: inline-block;
+	margin: 0 auto;
+	outline: none;
+	
+	&:focus {
+		outline: none;
+	}
+	
+	a {
+		display: block;
+		padding: 10px 30px;
+		background: $lightBlue;
+		color: $white;
+		text-transform: uppercase;
+		// @include transition(background .5s ease-in);
+		font-weight: 400;
+		
+		&:hover {
+			background: darken($lightBlue, 5%);
+			color: $white;
+		}
+		
+		&:active {
+			color: #ccc;
+			background: darken($lightBlue, 5%);
+		}
+	}
+}
+
+input {
+	outline: none;
+	
+	&:focus {
+		outline: none;
+	}
+}
+
+.woocommerce {
+	a {
+		&.wl-add-to {
+			background: none;
+			color: $black;
+			text-transform: uppercase;
+			border: 0;
+			box-shadow: none;
+			border-radius: 0;
+			
+			&:hover {
+				background: none;
+				color: $hoverBlack;
+			}
+			
+			&:active {
+				color: #ccc;
+				background: $black;
+			}
+		}
+		
+		&.button {
+			
+			&.alt {
+				padding: 10px 30px;
+				background: $black;
+				color: $white;
+				font-weight: 400;
+				border-radius: 0;
+				border: 0;
+				text-shadow: none;
+				
+				&:hover {
+					background: $hoverBlack;
+				}
+				
+				&:active {
+					color: #ccc;
+					background: $black;
+				}
+			}
+		}
+	}
+	
+	button {
+		&.button {
+			padding: 10px 30px;
+			background: $black;
+			color: $white;
+			font-weight: 400;
+			border-radius: 0;
+			border: 0;
+			text-shadow: none;
+			
+			&:hover {
+				background: $hoverBlack;
+			}
+			
+			&:active {
+				color: #ccc;
+				background: $black;
+			}
+		}
+	}
+	
+	input {
+		&.button {
+			padding: 10px 30px;
+			background: $black;
+			color: $white;
+			font-weight: 400;
+			box-shadow: none;
+			text-shadow: none;
+			border-radius: 0;
+			border: 0;
+			
+			&:hover {
+				background: $hoverBlack;
+			}
+			
+			&:active {
+				color: #ccc;
+				background: $black;
+			}
+			
+			&.alt {
+				padding: 10px 30px;
+				background: $black;
+				color: $white;
+				font-weight: 400;
+				box-shadow: none;
+				text-shadow: none;
+				border-radius: 0;
+				border: 0;
+				
+				&:hover {
+					background: $hoverBlack;
+				}
+				
+				&:active {
+					color: #ccc;
+					background: $black;
+				}
+			}
+		}
+	}
+}
+
+// WP WYSIWIG classes
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	margin: 0 auto;
+	display: block;
+}

@@ -1,0 +1,342 @@
+.product {
+	@include clearfix;
+	margin-top: 30px;
+	
+	.product_images {
+		@include span-columns(6);
+		
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+		
+		.images {
+			width: 100% !important;
+			
+			.thumbnails {
+				padding-top: 0em !important;
+				width: 23.23176% !important;
+				margin-right: 2.35765% !important;
+				height: 410px;
+			
+				.caroufredsel_wrapper {
+					width: 100% !important;
+					overflow: visible !important;
+					
+					.yith_magnifier_gallery {
+						@include clearfix;
+						position: relative !important;
+						width: 100% !important;
+						height: 100% !important;
+						
+						li {
+							width: 100% !important;
+							a {
+								img {
+									box-shadow: none;
+								}
+							}
+						}
+					}
+				}
+				
+				&:hover {
+				
+					#slider-prev {
+						display: none !important;
+					}
+					
+					#slider-next {
+						display: none !important;
+					}
+				}
+			}
+			
+		}
+		
+		.hover_info { 
+			clear: both;
+			display: block;
+			position: relative;
+			text-align: center;
+			margin-top: 10px;
+		}
+		
+		> p { 
+			color: $darkGray;
+			margin-top: 15px;
+		}
+	}
+	
+	.product_info {
+		@include span-columns(6);
+		@include omega();
+		
+		@include media($mobile) {
+			@include span-columns(4);
+			text-align: center;
+		}
+		h1 {
+			line-height: 1.25;
+		}
+		p {
+			margin: 10px 0 20px;
+		}
+		
+		.tabs {
+			display: none;
+		}
+		
+		.entry-content {
+				
+			h2 {
+				display: none;
+			}
+			
+			p { 
+				margin-top: 10px;
+			}
+		}
+		
+		.related {
+			display: none;
+		}
+		
+		button { 
+			float: left;
+			background: $black;
+			color: $white;
+			width: 175px;
+			height: 36px;
+			
+			@include media($mobile) {
+				float: none;
+			}
+			 	a { 
+				 color: $white;
+				 font-weight: 300;
+				 	
+				 	&:hover { 
+						color: $white;
+					 }
+				}
+		}
+		
+		.product_price { 
+			display: none;
+			padding: 10px 0 20px;
+			
+			p { 
+				font-weight: bold;
+			}
+		}
+		
+		#wl-wrapper.wl-button-wrap { 
+			padding: 0;
+		}
+	}
+	
+	.product_title {
+		display: none;
+	}
+	
+	div[itemprop="description"] {
+		display: none;
+	}
+	
+	.variations {
+		display: none;
+	}
+	
+	.product_meta {
+		display: none;
+	}
+	
+	#wl-wrapper {
+		.wl-add-to {
+			padding: 10px 30px;
+			background: $lightBlue;
+			color: $white;
+			text-transform: uppercase;
+			@include transition(background .5s ease-in);
+			font-weight: 400;
+			font-size: 12px;
+			text-shadow: none;
+			
+			&:hover {
+				background: darken($lightBlue, 5%);
+			}
+		}
+		.wl-already-in {
+			font-size: 10px;
+			display: none;
+		}
+	}
+}
+
+
+
+.related_products {
+	@include outer-container;
+	margin-top: 70px;
+	
+	h2 { 
+		font-weight: 300;
+		text-align: center;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	
+	.related_product { 
+		@include clearfix;
+		@include background(url("../images/divider.png") top no-repeat);
+		display: block;
+		width: 100%;
+		padding-top: 3px;
+		
+		.related_products_container {
+			@include span-columns(4);
+			margin-bottom: 20px;
+			height: 250px;
+			
+			@include media($mobile) {
+				@include span-columns(4);
+				height: auto;
+			}
+			
+			.img_container {
+				//@include vertical-align;
+			}
+		
+			img.related_prod_img { 
+				width: 60%;
+				height: auto;
+				display: block;
+				margin: 0 auto;
+			}
+			
+			p.related_title {
+				position: absolute;
+				bottom: 0px;
+				width: 100%;
+				text-align: center;
+				margin-top: 30px;
+				font-size: 16px;
+				font-weight: 300;
+				
+				@include media($mobile) {
+					position: relative;
+					margin-bottom: 20px;
+				}
+			}
+		}	
+	}
+}
+
+// Hide product image on YITH Zoom hover
+.product_images {
+	
+	.images {
+		width: 100%;
+	
+		.thumbnails {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		> .yith_magnifier_zoom_wrap {
+			position: absolute;
+			top: 0 !important;
+			left: 20% !important;
+			min-height: 375px;
+			margin-right: 2.35765% !important;
+			
+			@include media($break960) {
+				left: 26% !important;
+			}
+			
+			&:hover {
+				.woocommerce-main-image {
+					img {
+						visibility: hidden;
+						
+						@include media($mobile) {
+							visibility: visible;
+						}
+					}
+				}
+			}
+			.yith_magnifier_zoom {
+				display: block;
+				//width: 120%;
+				height: auto;
+				
+				@include media($break960) {
+					width: 100%;
+				}
+				
+				img {
+					width: 100%;
+				}
+			}
+	}
+	
+	.yith_magnifier_mousetrap {
+		width: 120% !important;
+		
+		@include media($break960) {
+			width: 100% !important;
+		}
+	}
+	
+	}
+	
+	.yith_magnifier_zoom {
+		display: none;
+	}
+	
+	.yith_magnifier_zoom_magnifier {
+		//background-color: $white;
+	}
+}
+
+.more_from {
+	text-transform: uppercase;
+}
+
+.single_variation_wrap {
+	display: block !important;
+}
+
+.video_thumbnail {
+	margin-top: 10px;
+	max-width: 90px;
+	clear: both;
+	
+	img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+.fancybox-mobile {
+	z-index: 10001;
+}
+
+.fancybox_video {
+	display: none; 
+	min-width: 730px;
+	
+	@include media($break820) {
+		min-width: 680px;
+	}
+	
+	@include media($tablet) {
+		min-width: 510px;
+	}
+	
+	@include media($mobile) {
+		min-width: 226px;
+	}
+}

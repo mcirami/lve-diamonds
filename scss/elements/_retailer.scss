@@ -1,0 +1,129 @@
+h1 {
+	&.retail_title {
+		text-align: left;
+	}	
+}
+
+.retail_download {
+	@include span-columns(6);
+	
+	@include media($mobile) {
+		@include span-columns(4);
+	}
+	
+	ul {
+		@include clearfix;
+		list-style-type: none;
+		font-size: 12px;
+		
+		li {
+			@include clearfix;
+		}
+	}
+	
+	h2 {
+		margin-top: 20px;
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+	
+	h3 {
+		font-size: 14px;
+		margin: 0;
+		font-weight: 600;
+	}
+	
+	.thumbnail_image {
+		@include span-columns(2.4);
+		
+		img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+	
+	.file_description {
+		@include span-columns(8);
+	}
+	
+	.download_icon {
+		@include span-columns(1.6);
+		position: absolute;
+		right: 0;
+		height: 100%;
+		
+		a {
+			position: absolute;
+			top: 50%;
+			margin-top: -14px;
+			right: 0;
+			display: block;
+		}
+		
+		.fa {
+			background: $black;
+			color: $white;
+			padding: 5px;
+			font-size: 18px;
+			text-align: right;
+		}
+	}
+	
+	.download_item {
+		margin-bottom: 20px;
+	}
+}
+
+.download_all {
+	@include span-columns(6);
+	margin-right: 0;
+	float: right;
+	border: 2px solid $black;
+	padding: 20px;
+	margin-top: 20px;
+	max-width: 450px;
+	
+	@include media($mobile) {
+		@include span-columns(4);
+		max-width: 100%;
+	}
+	
+	h3 {
+		margin-top: 0px;
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+	
+	.fa {
+		background: $black;
+		color: $white;
+		padding: 5px;
+		font-size: 18px;
+		text-align: right;
+		display: inline-block;
+		float: left;
+		margin-right: 10px;
+	}
+	
+	a {
+		color: $black;
+		
+		&:hover {
+			color: $gray;
+		}
+	}
+	
+	.download_all_text {
+		display: inline-block;
+		
+		h4 {
+			margin: 0;
+			line-height: 1;
+			margin-bottom: 43px;
+		}
+	}
+	
+	.download_trouble {
+		margin-top: 0px;
+	}
+}

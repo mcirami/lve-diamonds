@@ -1,0 +1,95 @@
+.gform_wrapper {
+	.top_label {
+		label {
+			&.gfield_label {
+				font-weight: 400;
+			}
+		}
+		
+		input[type="submit"] {
+			background: $black;
+			color: $white;
+			padding: 5px 15px 5px 15px;
+			border: none;
+		}
+	}
+	.gform_footer {
+		input[type="submit"] {
+			&.gform_button {
+				float: right;
+				display: block;
+				padding: 10px 50px;
+				background: $lightBlue;
+				color: $white;
+				text-transform: uppercase;
+				font-weight: 400;
+				font-size: 12px;
+				border: 0;
+				
+				&:hover {
+					background: darken($lightBlue, 5%);
+				}
+			}
+		}
+		
+	}
+	
+	textarea {
+		border-color: #d8d8d8;
+	}
+	
+	label {
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+}
+
+#gform_wrapper_2 {
+	max-width: 100%;
+	
+	label {
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+	
+	textarea {
+		border-color: #d8d8d8;
+	}
+	
+	.col_half { 
+		@include span-columns(6);
+		
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+	}
+	
+	
+	.gf_right_half { 
+		@include omega();
+		float: left !important;
+		
+		&.gf_left_half { 
+			float: left !important;
+		}
+	}
+}
+
+.page-id-215 {
+	
+	.contact_us_ps {
+		padding: 0 100px;
+	}
+
+	.contact_us_sub_head {
+		font-family: 'Raleway', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.6;
+	}
+	
+	#gform_submit_button_2 {
+		margin-right: 6px;
+	}
+
+}

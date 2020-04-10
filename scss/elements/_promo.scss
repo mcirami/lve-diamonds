@@ -1,0 +1,81 @@
+.promotional_area {
+	text-align: center;
+	padding: 80px 0;
+	
+	@include media($tablet) {
+		padding: 50px 0;
+	}
+	
+	@include media($mobile) {
+		padding: 20px 0;
+	}
+	
+	img {
+		display: inline-block;
+		margin-top: 10px;
+	}
+}
+
+.store_locator_section { 
+	text-align: center;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+	@include media($tablet){
+		background-position: left top;
+		background-size: 165%;
+	}
+	
+	.container {
+		padding: 0;
+	}
+	
+	section.store_locator_area { 
+		
+		h2 { 
+			font-weight: 200;
+			color: $black;
+			position: relative;
+			z-index: 9;
+			
+			@include media($mobile){
+				font-size: 20px;
+			}
+		}
+		
+		p { 
+			color: $black;
+			font-weight: 200;
+			font-size: 14px;
+			position: relative;
+			z-index: 9;
+			margin-bottom: 40px;
+			
+			@include media($tablet){
+				margin-bottom: 20px;
+			}
+		}
+		
+		button.square_button { 
+			position: relative;
+			@include media($mobile){
+				
+			}
+		}
+	}
+	.store_locator_content {
+		@include span-columns(5.5);
+		@include shift(6.5);
+		padding: 8% 3%;
+		
+		@include media($tablet){
+			@include span-columns(12);
+			@include shift(0);
+			background-color: $white;
+			padding: 3% 10% 6%;
+			margin-top: 44%;
+		}
+		
+	}
+}

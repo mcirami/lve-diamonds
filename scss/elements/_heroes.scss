@@ -1,0 +1,334 @@
+.flex-viewport {
+	.hero_video {
+		background: $black;
+	}
+}
+
+.home-hero {
+	
+	.hero_slides {
+		background-color: $white;
+		
+		.hero_right {
+			background-position: left 38% top;
+			
+			@include media($tablet){
+				background-size: 165%;
+				background-position: right top;
+			}
+			
+			.hero_copy {
+			
+				h2 {
+					color: $lightBlue;
+					font-size: 28px;
+					
+					@include media($tablet){
+						margin-bottom: 10px;
+						font-size: 24px;
+						color: $white;
+					}
+				}
+				
+				.wp-image-1174 {
+					
+					@include media($mobile){
+						max-width: 25%;
+					}
+				}
+			
+			}
+			
+		}
+		
+		.hero_left {
+			@include media($tablet){
+				background-size: 165%;
+			}
+			
+			.hero_copy {
+			
+				h2 {
+					color: $lightBlue;
+					font-size: 28px;
+					
+					@include media($tablet){
+						margin-bottom: 10px;
+						font-size: 24px;
+						color: $white;
+					}
+				}
+			
+			}
+		}
+		
+		.hero_copy {
+			padding: 5% 7% !important;
+			text-transform: uppercase;
+			&.center_copy {
+				padding: 0 6%;
+				
+				h2 {
+					text-align: center;
+				}
+				
+				p {
+					text-align: center;
+				}
+				
+				a {
+					text-align: center;
+				}
+				
+				img {
+					text-align: center;
+				}
+			}
+			
+			h2 {
+				color: $lightBlue;
+				font-size: 28px;
+			}
+			
+			a {
+				color: $lightBlue;
+				text-transform: uppercase;
+				font-size: 13px;
+				font-weight: bold;
+				
+				&:hover {
+					color: $lightGray;
+					@include media($mobile){
+						&:hover {
+							color: $black;
+						}
+					}
+				}
+			}
+		}
+		
+		.flex-control-nav {
+			z-index: 10000;
+			text-align: center;
+			bottom: 10px;
+			
+			li {
+				
+				a {
+					background: #1c1c1c;
+					
+					&.flex-active {
+						background: #434343;
+					}
+				}
+			}
+		}
+	}
+}
+
+.hero_slides {
+	@include clearfix;
+	-webkit-font-smoothing: antialiased;
+	//background: $black;
+	
+	&.flexslider {
+		margin: 0;
+		background: none;
+		border: 0;
+		box-shadow: none;
+		
+		@include media($mobile) {
+			margin: 0 0 10px;
+		}
+	}
+	
+	.flex-control-nav {
+		text-align: right;
+		
+		a {
+			text-indent: -9999em;
+			display: block;
+			text-align: left;
+			font-size: 13px;
+		}
+	}
+	
+	ul {
+		@include clearfix;
+		list-style-type: none;
+	}
+	
+	.hero_copy {
+		@include span-columns(5);
+		
+		h2 {
+			font-size: 40px;
+			font-weight: 300;
+			text-transform: uppercase;
+			-webkit-font-smoothing: antialiased;
+			line-height: 1.2;
+			margin-bottom: 20px;
+			color: $lightBlue;
+			
+			@include media($tablet) {
+				font-size: 26px;
+			}
+		}
+		
+		a {
+			
+		}
+		
+		p {
+			font-size: 16px;
+			line-height: 1.2;
+		}
+	}
+	
+	.hero_right {
+		//@include outer-container;
+		width: 100%;
+		float: left;
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+		@include media($tablet){
+			background-position: right top;
+		}
+		
+		.hero_copy {
+			@include span-columns(5);
+			padding: 5% 7%;
+			
+			@include media($tablet){
+				@include span-columns(12);
+				margin-top: 45%;
+				background-color: $lightBlue;
+				text-align: center;
+				
+				h2 {
+					color: $white;
+					
+					@include media($tablet){
+						font-size: 28px;
+						margin-bottom: 0;
+					}
+				}
+				
+				
+				a {
+					color: $white;	
+				}
+			}
+		}
+	}
+	
+	.hero_left {
+		//@include outer-container;
+		width: 100%;
+		float: left;
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+		@include media($tablet){
+			background-position: left top;
+			background-size: 240%;
+		}
+		
+		@include media($mobile){
+			background-size: 300%;
+		}
+		
+		.hero_copy {
+			@include span-columns(5);
+			@include shift(7);
+			padding: 7% 7% 7% 0%;
+			
+			@include media($tablet){
+				@include span-columns(12);
+				@include shift(0);
+				margin-top: 57%;
+				padding: 2% 10%;
+				background-color: $lightBlue;
+				text-align: center;
+				
+				@include media($mobile){
+					margin-top: 65%;
+				}
+				
+				h2 {
+					color: $white;
+					
+					@include media($tablet){
+						font-size: 28px;
+						margin-bottom: 0;
+					}
+				}
+				
+				p {
+					color: $white;
+					font-size: 14px;
+					font-weight: 600;
+				}
+				
+				a {
+					color: $white;	
+				}
+			}
+		}
+	}
+	
+	a {
+		font-size: 16px;
+		color: $black;
+		margin-top: 10px;
+		display: block;
+		
+		@include media($tablet) {
+			font-size: 14px;
+		}
+		
+		&:hover {
+			color: $darkGray;
+		}
+	}
+}
+
+.hero_video_wrap {
+	.video_container {
+		padding-bottom: 26.25%;
+		background: $black;
+		
+		@include media($mobile) {
+			width: 100%;
+			background: transparent;
+		}
+	}
+	.video_copy {
+		@include clearfix;
+		position: absolute;
+		z-index: 1000;
+		color: $white;
+		margin-left: 40px;
+		top: 20px;
+		
+		a {
+			color: $white;
+		}
+		
+		@include media($mobile) {
+			position: relative;
+			color: $black;
+			width: 100%;
+			margin: 0;
+			top: 0;
+			a {
+				color: $black;
+			}
+		}
+	}
+}
+
+.hero_video {
+	@include clearfix;
+}

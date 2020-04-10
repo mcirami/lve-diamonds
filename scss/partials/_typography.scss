@@ -1,0 +1,37 @@
+// typography baselines and @font face setups
+
+body {
+	@include openSans;
+	font-weight: 400;
+}
+
+h3, h4, h5, h6 {
+	@include openSans;
+	font-weight: 400;
+}
+
+h1, h2 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 12px;
+	line-height: 1.75;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.page-id-175, .page-id-312, .page-id-209, .page-id-213 {
+	p {
+		font-size: 14px;
+		
+		img {
+			margin-top: 0;
+		}
+	}
+}

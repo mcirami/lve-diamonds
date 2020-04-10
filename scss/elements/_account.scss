@@ -1,0 +1,30 @@
+.page {
+	.woocommerce {
+		table {
+			&.shop_table {
+				th {
+					font-weight: 400;
+				}
+				tr {
+					font-weight: 300;
+				}
+			}
+		}
+		input {
+			&.button {
+				text-transform: uppercase;
+			}
+		}
+	}
+	.product-name {
+		strong {
+			font-weight: 400;
+		}
+	}
+}
+
+.woocommerce-account {
+	h1 {
+		margin-bottom: 30px;
+	}
+}

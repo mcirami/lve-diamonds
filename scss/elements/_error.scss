@@ -1,0 +1,19 @@
+.not-found-wrap {
+	max-width: 960px;
+	margin: 0 auto;
+	min-height: 300px;
+	display: table;
+	
+	.not-found {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	h1 {
+		font-size: 38px;
+	}
+	
+	p {
+		font-size: 18px;
+	}
+}

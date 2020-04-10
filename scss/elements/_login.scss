@@ -1,0 +1,94 @@
+section.gray_bg { 
+	@include clearfix;
+	width: 100%;
+	padding: 40px 0;
+	background: -moz-linear-gradient(left,  rgba(242,243,243,0) 0%, rgba(242,243,243,0.5) 12%, rgba(242,243,243,0.5) 13%, rgba(242,243,243,0.5) 82%, rgba(242,243,243,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(242,243,243,0)), color-stop(12%,rgba(242,243,243,0.5)), color-stop(13%,rgba(242,243,243,0.5)), color-stop(82%,rgba(242,243,243,0.5)), color-stop(100%,rgba(242,243,243,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(242,243,243,0) 0%,rgba(242,243,243,0.5) 12%,rgba(242,243,243,0.5) 13%,rgba(242,243,243,0.5) 82%,rgba(242,243,243,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(242,243,243,0) 0%,rgba(242,243,243,0.5) 12%,rgba(242,243,243,0.5) 13%,rgba(242,243,243,0.5) 82%,rgba(242,243,243,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(242,243,243,0) 0%,rgba(242,243,243,0.5) 12%,rgba(242,243,243,0.5) 13%,rgba(242,243,243,0.5) 82%,rgba(242,243,243,0) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(242,243,243,0) 0%,rgba(242,243,243,0.5) 12%,rgba(242,243,243,0.5) 13%,rgba(242,243,243,0.5) 82%,rgba(242,243,243,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f2f3f3', endColorstr='#00f2f3f3',GradientType=1 ); /* IE6-9 */
+
+}
+
+	
+.retail_login {
+	@include clearfix;
+	@include span-columns(5);
+	@include shift(3.5);
+	
+	@include media($tablet) {
+		@include span-columns(5);
+		@include shift(1.5);
+	}
+	
+	@include media($mobile) {
+		@include span-columns(4);
+		@include shift(0);
+	}
+	
+
+		.retail_container { 
+			
+	 
+				h1 { 
+					text-align: center;
+				}
+				
+				p { 
+					text-align: center;
+					margin: 7px 0 5px 0;
+					padding-top: 5px;
+
+					a { 
+					color: $black;
+
+						&:hover { 
+							color: $red;
+						}
+					}
+				}
+				
+				form {
+					margin-top: 20px;
+				}
+				
+				input[type="text"], input[type="password"] { 
+					width: 60%;
+					padding-bottom: 10px;
+					margin-bottom: 10px;
+					
+					@include media($tablet) {
+						width: 70%;
+					}
+					
+					@include media($mobile) {
+						width: 80%;
+					}
+				}
+				
+				input[type="submit"] { 
+					background: $black;
+					color: $white;
+					padding: 10px 30px;
+					border: none;
+					text-transform: uppercase;
+					font-weight: 400;
+
+					&:hover { 
+						background: $darkGray;
+						transition: background 0.5s ease-out;
+					}
+				}
+				
+				input#user_pass, input#user_login { 
+					padding-left: 7px;
+					padding-top: 8px;
+				}
+				
+				label { 
+					display: none;
+				}	
+		}	
+}

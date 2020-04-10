@@ -1,0 +1,288 @@
+#global_footer {
+	min-height: 300px;
+	background-color: $grayBlack;
+	
+	@include media($mobile){
+		margin-right: 0;
+	}
+	
+	.menu_wrap {
+		@include span-columns(8);
+		
+		padding-top: 50px;
+		padding-bottom: 50px;
+		
+		@include media($tablet){
+			width: 100%;
+			padding-left: 75px;
+		}
+		
+		@include media($mobile){
+			padding: 50px 0 0 0;
+		}
+		
+		.footer_menu {
+			@include clearfix;
+			list-style: none;
+			
+			.mobile_remove {
+				
+				@include media($mobile){
+					display: none;
+				}
+			}
+			
+			.mobile_only {
+				display: none;
+		
+				@include media($mobile){
+					display: block;
+				}
+			}
+			
+			li {
+				@include span-columns(3);
+				margin-right: 0;
+				 
+				@include media($mobile) {
+					@include span-columns(4);
+					width: 45%;
+					text-align: left;
+					margin-bottom: 2px;
+					margin-right: 13px;
+				}
+				
+				&#menu-item-1356 {
+					
+					@include media($mobile) {
+						top: -30px;
+					}
+				}
+				
+				&#menu-item-91 {
+					
+					@include media($mobile) {
+						top: -61px;
+					}
+				}
+				
+				&#menu-item-309 {
+					
+					@include media($mobile) {
+						top: 93px;
+					}
+				}
+				
+				&#menu-item-1355 {
+					
+					@include media($mobile){
+						top: 96px;
+					}	
+				}
+
+				a {
+					color: $white;
+					font-size: 12px;
+					text-transform: uppercase;
+					font-weight: lighter;
+				}
+				
+				.sub-menu {
+					@include clearfix;
+					margin-top: 5px;
+					
+					.mobile_remove {
+				
+					@include media($mobile){
+						display: none;
+						}
+					}
+					
+					 li {
+						 @include span-columns(12);
+						 line-height: 16px;	
+						 
+						 a {
+							 color: $darkGray;
+							 font-size: 12px;
+							 text-transform: none;
+							 
+							 &:hover {
+								 color: $white;
+							 }
+						 }
+					 }
+				}
+			}
+		}
+	}
+	
+	.form_wrap {
+		@include span-columns(4);
+		@include omega();
+		@include openSans;
+		
+		padding-top: 55px;
+		
+		@include media($tablet) {
+			display: block;
+			width: 100%;
+			padding: 25px 75px;
+		}
+		
+		@include media($mobile) {
+			padding: 10px 0px 25px 0;
+		}
+		
+		#gform_wrapper_1 {
+			margin: 0px;
+			width: 100%;
+		
+			#gform_1 {
+			
+				.gform_title {
+					@include openSans;
+					font-size: 12px;
+					color: white;
+					font-weight: lighter;
+					text-transform: uppercase;
+					margin: 0px;
+				}
+				
+				input.medium {
+					width: 100%;
+					background-color: $white;
+					border: none;
+					height: 30px;
+					border-radius: 0;
+				}
+				
+				.gform_body {
+					width: 100%;
+				}
+				
+				input#input_1_1 { 
+					width: 100%;
+					
+				/*	@include media($tablet){
+						width: 100%;
+					}
+					
+					@include media($mobile){
+						width: 100%;
+					} */
+				}
+			
+				.gfield_label {
+					display: none;
+				}
+				
+				.gfield_required {
+					display: none;
+				}
+				
+				.gform_body {
+					float: left;
+				}
+				
+				.gform_footer {
+					padding: 0;
+					margin: 0px;
+					clear: none;
+					position: absolute;
+					right: 0;
+					font-weight: lighter;
+
+					.button {
+						border: none !important;
+						background: $charcoal !important;
+						border-radius: 0;
+						display: block;
+						box-shadow: none;
+						text-shadow: none;
+						line-height: 1.5;
+						color: $white !important;
+						padding: 0 30px !important;
+						text-transform: uppercase !important;
+						font-size: 12px !important;
+						margin-left: 5px !important;
+						height: 30px;
+					}
+				}
+			}
+		}
+	}
+	
+	.gfield_description {
+		font-size: 11px;
+		font-weight: lighter;
+		color: $white;
+		width: 99.8%;
+		padding: 10px 0 0 0;
+	}
+	
+	.gform_confirmation_message {
+		color: $white;
+	}
+	
+	.footer_bottom {
+		text-align: center;
+		
+		@include media($mobile) {
+			padding-bottom: 20px;
+		}
+		
+		hr {
+		 	border-color: $charcoal;
+		}
+		
+		ul {
+			@include clearfix;
+			list-style: none;
+			padding-top: 20px;
+			text-align: center;
+			
+			@include media($mobile){
+				width: 100%;
+			}
+			
+			li {
+				padding-right: 15px;
+				display: inline-block;
+				font-size: 12px;
+				
+				a {
+					color: $darkGray;
+					font-size: 12px;
+					
+					&:hover {
+						 color: $white;
+					 }
+				}
+			}
+			
+			li.copywrite_text {
+					@include span-columns(12);
+					color: $darkGray;
+					
+					@include media($mobile){
+						margin-top: 10px;
+						line-height: 1.5;
+						font-size: x-small;
+					}
+				}
+		}
+		
+		.copyright-logo {
+			width: 30px;
+			margin-left: 3px;
+			margin-right: 2px;
+		}
+	}
+}
+
+.dark_background {
+	#global_footer {
+		background-color: $grayBlack;
+	}
+}
